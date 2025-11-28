@@ -38,6 +38,9 @@
   ul {
     padding-left: 20px;
   }
+   a {
+    color: #7aa2f7;
+  }
   .screenshot-placeholder {
     width: 100%;
     height: 280px;
@@ -77,9 +80,9 @@
   <section>
     <h2>What is Laziest VIM?</h2>
     <p>
-      Laziest VIM provides an IDEalized configuration that can be applied in 30 seconds.
-      It is lazier than LazyVIM and maximizes compatibility by requiring only standard VIM plugins.
-      It is ideal for people that edit technical files across many remote computers and need to combine
+      Laziest VIM provides an IDEalized Vim configuration that can be applied in 30 seconds.
+      It is lazier than LazyVim and maximizes compatibility by requiring only standard VIM plugins.
+      Laziest VIM is ideal for people that edit technical files across many remote computers and need to combine
       efficient file browsing with the power of VIM, without spending time configuring it.
     </p>
   </section>
@@ -87,12 +90,13 @@
   <section>
     <h2>Features</h2>
     <ul>
-      <li>Automatic terminal toggling</li>
-      <li>Git integration via tig</li>
+      <li>Easy terminal toggling</li>
       <li>File tree smart behavior</li>
+      <li>Git integration via tig</li>
       <li>Shift-scroll terminal compatibility</li>
       <li>Preconfigured comment/uncomment shortcuts</li>
       <li>Recursive grep via Control+f</li>
+      <li>Seamless integration on local and SSH environments</li>
     </ul>
   </section>
 
@@ -102,9 +106,12 @@
   </section>
 
   <section>
-    <h2>Get Started</h2>
+    <h2>Get started</h2>
     <div class='install-box'>sudo apt install tig
 curl -Ls vim.logical.li | bash</div>
+    <p>
+      Don't worry! Your existing .vimrc is automatically backed during the installation.
+    </p>
   </section>
 
   <section>
@@ -127,8 +134,9 @@ curl -Ls vim.logical.li | bash</div>
       <li><code>m</code> - opens contextual menu for a file or directory in the file tree</li>
       <li><code>r</code> - refreshes the contents of the selected directory in the file tree</li>
       <li><code>q</code> - closes results window opened by a plugin (file tree, tig, search)</li>
-      <li><code>\c</code> - comments a block of code if selected in visual mode using #</li>
-      <li><code>\u</code> - uncomments a block of code commented with # if selected in visual mode using</li>
+      <li><code>\c</code> - comments a block of code if selected in visual mode using <code>#</code></li>
+      <li><code>\u</code> - uncomments a block of code commented with <code>#</code> if selected in visual mode</li>
+      <li><code>:cd</code> - changes the current directory and refreshes the file tree</li>
       <li><code>:q</code> -  quits</li>
       <li><code>:wq</code> - saves all files and quits</li>
     </ul>
@@ -139,6 +147,16 @@ curl -Ls vim.logical.li | bash</div>
     <p>
       Blog post: <a href='https://logical.li/blog/IDEalization-of-Vim/' style='color:#7dcfff'>An IDEalization of Vim</a><br>
       Repository: <a href='https://github.com/ghomem/laziest-vim' style='color:#7dcfff'>github.com/ghomem/laziest-vim</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>FAQ</h2>
+    <p>
+      <strong>1. Why is the terminal in scrolling mode?</strong><br>Shift+PageUp/PageDown sets the terminal to scrolling mode so that history can be reviewed (regular Vim search functions are available). If you finished reviewing terminal history you can get back to entering commands by pressing "i".<br>
+    </p>
+    <p>
+      <strong>2. How do you update this website?</strong><br>With Laziest VIM over SSH, of course.
     </p>
   </section>
 
