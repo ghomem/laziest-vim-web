@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<title>Laziest VIM</title>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #16161f; /* Tokyo Night base */
+    color: #c0caf5;
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #7aa2f7;
+  }
+  .tagline {
+    font-size: 1.3rem;
+    color: #a9b1d6;
+  }
+  section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  h2 {
+    color: #7dcfff;
+    border-bottom: 1px solid #3b4261;
+    padding-bottom: 6px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  .screenshot-placeholder {
+    width: 100%;
+    height: 280px;
+    background: #24283b;
+    border: 1px dashed #565f89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #565f89;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+  }
+  .install-box {
+    background: #24283b;
+    border-left: 4px solid #7aa2f7;
+    padding: 20px;
+    border-radius: 6px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #c0caf5;
+  }
+  footer {
+    text-align: center;
+    margin: 60px 0;
+    color: #565f89;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Laziest VIM</h1>
+    <div class='tagline'>The zero-effort VIM config for Infrastructure Engineers.</div>
+  </header>
+
+  <section>
+    <h2>What is Laziest VIM?</h2>
+    <p>
+      Laziest VIM provides an IDEalized configuration that can be applied in 30 seconds.
+      It is lazier than LazyVIM and maximizes compatibility by requiring only standard VIM plugins.
+      It is ideal for people that edit technical files across many remote computers and need to combine
+      efficient file browsing with the power of VIM, without spending time configuring it.
+    </p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Automatic terminal toggling</li>
+      <li>Git integration via tig</li>
+      <li>File tree smart behavior</li>
+      <li>Shift-scroll terminal compatibility</li>
+      <li>Preconfigured comment/uncomment shortcuts</li>
+      <li>Recursive grep via Control+f</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Screenshot</h2>
+    <div><a href="https://logical.li/img/posts/vim-01.jpeg" target="_blank"><img src="https://logical.li/img/posts/vim-01.jpeg" width="1000"></a></div>
+  </section>
+
+  <section>
+    <h2>Get Started</h2>
+    <div class='install-box'>sudo apt install tig
+curl -Ls vim.logical.li | bash</div>
+  </section>
+
+  <section>
+    <h2>Keyboard shortcuts</h2>
+    <ul>
+      <li><code>Space</code> - expands a directory, updating CWD / opens a file moving the focus</li>
+      <li><code>Enter</code> - opens a file keeping the focus on the file tree</li>
+      <li><code>Control + t</code> - opens <code>tig</code> for the current file</li>
+      <li><code>Control + b</code> - opens <code>tig blame</code> for the current file</li>
+      <li><code>Control + y</code> - opens <code>tig</code> for the directory of the current file</li>
+      <li><code>Control + f</code> - greps recursively for a certain word, add -i to make the search case insensitive</li>
+      <li><code>Control + g</code> - syncs the file tree with vim's CWD (in case you changed if with <code>:cd</code> or <code>Space</code>)</li>
+      <li><code>Control + arrow</code> - switches to the window in the corresponding direction</li>
+      <li><code>Control + w</code> <code>w</code> or <code>Shift + Tab</code> - cycles across the windows clockwise</li>
+      <li><code>F2</code> - maximizes the terminal window vertically</li>
+      <li><code>F3</code> - toggles the file tree</li>
+      <li><code>F4</code> - opens a terminal in the directory of the current file</li>
+      <li><code>F6</code> - toggles the line numbers</li>
+      <li><code>C</code> - moves the root of the file tree to the selected directory</li>
+      <li><code>m</code> - opens contextual menu for a file or directory in the file tree</li>
+      <li><code>r</code> - refreshes the contents of the selected directory in the file tree</li>
+      <li><code>q</code> - closes results window opened by a plugin (file tree, tig, search)</li>
+      <li><code>\c</code> - comments a block of code if selected in visual mode using #</li>
+      <li><code>\u</code> - uncomments a block of code commented with # if selected in visual mode using</li>
+      <li><code>:q</code> -  quits</li>
+      <li><code>:wq</code> - saves all files and quits</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Details</h2>
+    <p>
+      Blog post: <a href='https://logical.li/blog/IDEalization-of-Vim/' style='color:#7dcfff'>An IDEalization of Vim</a><br>
+      Repository: <a href='https://github.com/ghomem/laziest-vim' style='color:#7dcfff'>github.com/ghomem/laziest-vim</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Acknowledgements</h2>
+    <p>
+      This project is a small convenience layer created to scratch an itch. All real merit goes to the authors and maintainers of
+      <strong>Vim</strong>, <strong>tig</strong>, and the plugins powering this setup:
+      <em>nerdtree</em>, <em>tokyonight-vim</em>, <em>lightline.vim</em>, <em>vim-fugitive</em>, <em>vim-puppet</em>, <em>tig-explorer.vim</em>, and <em>vim-grepper</em>.
+    </p>
+  </section>
+
+  <footer>
+    Created by <a href="https://logical.li">Gustavo Homem</a>
+  </footer>
+</body>
+</html>
