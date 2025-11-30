@@ -83,17 +83,22 @@
       Laziest VIM provides an IDEalized Vim configuration that can be applied in 30 seconds.
       It is lazier than LazyVim and maximizes compatibility by requiring only standard VIM plugins.
       Laziest VIM is ideal for people that edit technical files across many remote computers and need to combine
-      efficient file browsing with the power of VIM, without spending time configuring it.
+      efficient file browsing with the power of VIM, without spending time configuring it. It extends Vim in a confortable 
+      way while respecting pre-existing muscle memory.
     </p>
   </section>
 
   <section>
     <h2>Features</h2>
+    <p>
+      The Laziest VIM configuration includes:
     <ul>
       <li>Easy terminal toggling</li>
       <li>File tree smart behavior</li>
       <li>Git integration via tig</li>
       <li>Shift-scroll terminal compatibility</li>
+      <li>Modern Tokyo Night theme</li>
+      <li>Highlight of trailing spaces</li>
       <li>Preconfigured comment/uncomment shortcuts</li>
       <li>Recursive grep via Control+f</li>
       <li>Seamless integration on local and SSH environments</li>
@@ -110,7 +115,7 @@
     <div class='install-box'>sudo apt install tig
 curl -Ls vim.logical.li | bash</div>
     <p>
-      Don't worry! Your existing .vimrc is automatically backed during the installation.
+      Don't worry! Your existing .vimrc is automatically backed up during the installation.
     </p>
   </section>
 
@@ -119,6 +124,8 @@ curl -Ls vim.logical.li | bash</div>
     <ul>
       <li><code>Space</code> - expands a directory, updating CWD / opens a file moving the focus</li>
       <li><code>Enter</code> - opens a file keeping the focus on the file tree</li>
+      <li><code>Alt + Right</code> - navigates into the selected directory</li>
+      <li><code>Alt + Up</code> - navigates to the parent directory</li>
       <li><code>Control + t</code> - opens <code>tig</code> for the current file</li>
       <li><code>Control + b</code> - opens <code>tig blame</code> for the current file</li>
       <li><code>Control + y</code> - opens <code>tig</code> for the directory of the current file</li>
@@ -130,7 +137,6 @@ curl -Ls vim.logical.li | bash</div>
       <li><code>F3</code> - toggles the file tree</li>
       <li><code>F4</code> - opens a terminal in the directory of the current file</li>
       <li><code>F6</code> - toggles the line numbers</li>
-      <li><code>C</code> - moves the root of the file tree to the selected directory</li>
       <li><code>m</code> - opens contextual menu for a file or directory in the file tree</li>
       <li><code>r</code> - refreshes the contents of the selected directory in the file tree</li>
       <li><code>q</code> - closes results window opened by a plugin (file tree, tig, search)</li>
